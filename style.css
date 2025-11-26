@@ -1115,7 +1115,8 @@ html {
 
 .box1 img {
     width: 100%;
-    height: auto;
+    height: 200px; /* <-- Set equal height for all images */
+    object-fit: cover; /* Keeps image centered and cropped nicely */
     display: block;
     transition: transform 0.4s ease;
 }
