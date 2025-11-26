@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MM Hotel</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="icon" type="img/finallogo.png" href="img/finallogo.png">
+
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <link rel="icon" href="img/finallogo.png">
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 </head>
-
 <body>
     <header id="home">
         <nav class="navbar">
             <div class="logo">
                 <img src="img/finallogo.png" alt="">
-
+                
             </div>
 
             <ul class="nav_items" id="nav_links">
@@ -28,11 +27,11 @@
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#rooms">ROOMS</a></li>
                     <li><a href="#amenities">FEATURES</a></li>
-                    <li><a href="#coffeeShop">COFFEE_SHOP</a></li>
+                    <li><a href="#coffeeShop">COFFEE SHOP</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#gallery">GALLERY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-
+                    
                 </div>
             </ul>
 
@@ -43,7 +42,8 @@
 
         <section class="home">
             <h1 class="headinghome">Redifinding Comfort<br>the MM way</h1>
-            <h2 class="headinghome_1">Comfort is more than a promise it’s an experience we carefully craft in every stay.<br> Our signature blend of modern design, warm hospitality,<br> and thoughtful service ensures that every guest feels relaxed, valued,<br> and truly at home.</h2>
+            <h2 class="headinghome_1">Comfort is more than a promise it’s an experience we carefully craft in every stay.<br> 
+                Our signature blend of modern design, warm hospitality,<br> and thoughtful service ensures that every guest feels relaxed, valued,<br> and truly at home.</h2>
             <div class="main_btn">
                 <button class="btn btn1" onclick="openMessenger()">Book Now</button>
                 <button class="btn btn2" onclick="openVideoModal()"><i class="ri-play-circle-line"></i> Watch Tour</button>
@@ -52,217 +52,391 @@
     </header>
 
 
-    <!-- Video Modal -->
-    <div id="videoModal" class="video-modal">
-        <div class="video-modal-content">
-            <span class="close" onclick="closeVideoModal()">&times;</span>
+<!-- Video Modal -->
+<div id="videoModal" class="video-modal">
+  <div class="video-modal-content">
+    <span class="close" onclick="closeVideoModal()">&times;</span>
 
-            <!-- Local Video File -->
-            <video id="videoPlayer" width="100%" controls>
+    <!-- Local Video File -->
+    <video id="videoPlayer" width="100%" controls>
       <source src="vids/hotel.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-        </div>
-    </div>
+  </div>
+</div>
 
 
 
-    <script>
-        function openVideoModal() {
-            document.getElementById("videoModal").style.display = "flex";
-            document.getElementById("videoPlayer").play(); // Start video only when clicked
-        }
+<script>
+function openVideoModal() {
+  document.getElementById("videoModal").style.display = "flex";
+  document.getElementById("videoPlayer").play(); // Start video only when clicked
+}
 
-        function closeVideoModal() {
-            document.getElementById("videoModal").style.display = "none";
+function closeVideoModal() {
+  document.getElementById("videoModal").style.display = "none";
 
-            // Stop and reset video
-            const video = document.getElementById("videoPlayer");
-            video.pause();
-            video.currentTime = 0;
-        }
-    </script>
+  // Stop and reset video
+  const video = document.getElementById("videoPlayer");
+  video.pause();
+  video.currentTime = 0;
+}
+</script>
 
 
 
     <!-- ROOMS SECTION -->
-    <section class="sec rooms" id="rooms">
-        <h2>Featured Rooms</h2>
-        <div class="room-items">
+<section class="sec rooms" id="rooms">
+    <h2>Featured Rooms</h2>
+    <div class="room-items">
 
-            <div class="room-item">
-                <img src="img/deluxe room.jpg" alt="room" class="room-img">
-                <p class="room-name">STANDARD ROOM</p>
-                <p class="room-desc">A comfortable and well-appointed room designed for guests seeking a relaxing and affordable stay.</p>
-                <p class="room-status">2 Guests • 1 Bed</p>
-                <div class="room-info">
-                    <p class="room-rating">★ ★ ★ ★ ★</p>
-                    <p class="room-price">₱3,500 / night</p>
-                </div>
-                <button onclick="openRoomModal()">View Room Details</button>
+
+          <!-- ROOM 1**************************************************************************************************************-->
+        <div class="room-item">
+            <img src="rooms/R10.jfif" alt="room" class="room-img" onclick="openImage(this.src)">
+            <p class="room-name">STANDARD ROOM</p>
+            <p class="room-desc">A comfortable and well-appointed room designed for guests seeking a relaxing and affordable stay.</p>
+            <p class="room-status">2 Guests • 1 Bed</p>
+            <div class="room-info">
+                <p class="room-rating">★ ★ ★ ★ ★</p>
+                <p class="room-price">₱3,500 / night</p>
             </div>
-
-            <div class="room-item">
-                <img src="img/Suite Room.jpg" alt="room" class="room-img">
-                <p class="room-name">FAMILY ROOM</p>
-                <p class="room-desc">A spacious and cozy room designed to comfortably accommodate families, offering ample space and essential amenities for a relaxing shared stay.</p>
-                <p class="room-status">4 Guests • 2 Beds</p>
-                <div class="room-info">
-                    <p class="room-rating">★ ★ ★ ★ ★</p>
-                    <p class="room-price">₱6,800 / night</p>
-                </div>
-                <button onclick="openFamilyRoomModal()">View Room Details</button>
-            </div>
-
+            <button onclick="openRoomModal()">View Room Details</button>
         </div>
-    </section>
 
 
 
-    <!-- 🔹 ROOM DETAILS MODAL -->
-    <div id="roomModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeRoomModal()">&times;</span>
-            <div class="room-container">
-                <div class="room-image">
-                    <!-- Main Image -->
-                    <img id="mainImage" src="img/Standard Room.jpg" alt="Deluxe Room">
-
-                    <!-- Thumbnails -->
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="img/R2.png" onclick="changeImage(this)" alt="Room 1">
-                        <img class="thumbnail" src="img/R8.png" onclick="changeImage(this)" alt="Room 2">
-                        <img class="thumbnail" src="img/R6.png" onclick="changeImage(this)" alt="Room 3">
-                    </div>
-                </div>
-                <div class="room-details">
-                    <h2>STANDARD ROOM</h2>
-                    <p class="room-price">₱3,500 / night</p>
-                    <h3>Amenities</h3>
-                    <ul>
-                        <li>2 Guests</li>
-                        <li>1 Bed</li>
-                        <li>Free Wi-Fi</li>
-                        <li>Air Conditioning</li>
-                        <li>Smart TV</li>
-                    </ul>
-                    <p class="room-description">
-                        A spacious room with modern amenities and a relaxing ambiance. Perfect for a comfortable stay.
-                    </p>
-                </div>
+          <!-- ROOM 2**************************************************************************************************************-->
+        <div class="room-item">
+            <img src="rooms/R1.jpg" alt="room" class="room-img" onclick="openImage(this.src)">
+            <p class="room-name">FAMILY ROOM</p>
+            <p class="room-desc">A spacious and cozy room designed to comfortably accommodate families, offering ample space and essential amenities for a relaxing shared stay.</p>
+            <p class="room-status">4 Guests • 2 Beds</p>
+            <div class="room-info">
+                <p class="room-rating">★ ★ ★ ★ ★</p>
+                <p class="room-price">₱6,800 / night</p>
             </div>
+            <button onclick="openFamilyRoomModal()">View Room Details</button>
         </div>
+
+
+
+         <!-- Funtion HAll*************************************************************************************
+
+        <div class="room-item">
+            <img src="gallery/g9.jpg" alt="room" class="room-img" onclick="openImage(this.src)">
+            <p class="room-name">FUNCTION HALL</p>
+            <p class="room-desc">A spacious hall designed for weddings, events, and gatherings with complete amenities.</p>
+            <p class="room-status">Up to 200 Guests</p>
+            <div class="room-info">
+                <p class="room-rating">★ ★ ★ ★ ★</p>
+                <p class="room-price">₱8,500 / 4 Hours</p>
+            </div>
+            <button onclick="openFunctionHallModal()">View Details</button>
+        </div>
+        *************************-->
+
+
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="imageModal" class="image-modal">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<!-- CSS -->
+<style>
+.image-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9);
+}
+
+.image-modal .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 1px;
+}
+
+.image-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+<!-- JS -->
+<script>
+function openImage(src) {
+    document.getElementById('imageModal').style.display = "block";
+    document.getElementById('modalImg').src = src;
+}
+
+function closeImage() {
+    document.getElementById('imageModal').style.display = "none";
+}
+</script>
+
+
+ 
+
+<!-- 🔹 ROOM DETAILS MODAL -->
+<div id="roomModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeRoomModal()">&times;</span>
+    <div class="room-container">
+      <div class="room-image">
+        <!-- Main Image -->
+        <img id="mainImage" src="rooms/R10.jfif" alt="Deluxe Room">
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-container">
+          <img class="thumbnail" src="rooms/R6.jfif" onclick="changeImage(this)" alt="Room 1">
+          <img class="thumbnail" src="rooms/R11.jfif" onclick="changeImage(this)" alt="Room 2">
+          <img class="thumbnail" src="rooms/R6.png" onclick="changeImage(this)" alt="Room 3">
+          <img class="thumbnail" src="rooms/R7.jpg" onclick="changeImage(this)" alt="Room 4">
+        </div>
+      </div>
+      <div class="room-details">
+        <h2>STANDARD ROOM</h2>
+        <p class="room-price">₱3,500 / night</p>
+        <h3>Amenities</h3>
+        <ul>
+          <li>2 Guests</li>
+          <li>1 Bed</li>
+          <li>Free Wi-Fi</li>
+          <li>Air Conditioning</li>
+          <li>Smart TV</li>
+        </ul>
+        <p class="room-description">
+          A spacious room with modern amenities and a relaxing ambiance. Perfect for a comfortable stay.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAMILY ROOM Modal -->
+<div id="familyRoomModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeFamilyRoomModal()">&times;</span>
+    <div class="room-container">
+      <div class="room-image">
+        <!-- Main Image -->
+        <img id="familyMainImage" src="rooms/R1.jpg" alt="Family Room">
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-container">
+          <img class="thumbnail" src="rooms/R1.jpg" onclick="changeFamilyImage(this)" alt="Room 1">
+          <img class="thumbnail" src="rooms/R17.jfif" onclick="changeFamilyImage(this)" alt="Room 2">
+          <img class="thumbnail" src="rooms/R4.jpg" onclick="changeFamilyImage(this)" alt="Room 3">
+          <img class="thumbnail" src="rooms/R16.jfif" onclick="changeFamilyImage(this)" alt="Room 4">
+        </div>
+      </div>
+
+      <div class="room-details">
+        <h2>FAMILY ROOM</h2>
+        <p class="room-price">₱6,800 / night</p>
+        <h3>Amenities</h3>
+        <ul>
+          <li>4 Guests</li>
+          <li>2 Beds</li>
+          <li>Free Wi-Fi</li>
+          <li>Air Conditioning</li>
+          <li>Smart TV</li>
+        </ul>
+        <p class="room-description">
+          A spacious and cozy room designed to comfortably accommodate families, offering ample space and essential amenities for a relaxing shared stay.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--FUNCTION HALL MODAL ***************************************************************************
+<div id="FunctionHallModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeFunctionHallModal()">&times;</span>
+    <div class="room-container">
+      <div class="room-image">
+     -- Main Image -
+        <img id="FunctionHallImage" src="gallery/g9.jpg" alt="FunctionHall Room">
+
+       -- Thumbnails 
+        <div class="thumbnail-container">
+          <img class="thumbnail" src="gallery/g9.jpg" onclick="changeFunctionHallImage(this)" alt="Room 1">
+          <img class="thumbnail" src="gallery/g17.jpg" onclick="changeFunctionHallImage(this)" alt="Room 2">
+          <img class="thumbnail" src="gallery/g16.jpg" onclick="changeFunctionHallImage(this)" alt="Room 3">
+          <img class="thumbnail" src="img/funtionh.jpg" onclick="changeFunctionHallImage(this)" alt="Room 4">
+        </div>
+      </div>
+
+      <div class="room-details">
+        <h2>FUNCTION HALL </h2>
+        <p class="room-price">₱8,500 / 4 HOURS</p>
+        <h3>Amenities</h3>
+        <ul>
+          <li>Up to 200 Guests
+          <li>Free Wi-Fi</li>
+          <li>Air Conditioning</li>
+          <li>Projector</li>
+          <li>Sound System</li>
+          <li>LED Wall (Optional)</li>
+          <li>Tables & Chairs Included</li>
+        </ul>
+        <p class="room-description">
+         A spacious hall designed for weddings, events, and gatherings with complete amenities.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+************-->
+
+
+
+
+<!----------------------------------------------------- amenities and services----------------------------------------------------------->
+
+<section class="sec amenities" id="amenities">
+    <div class="head">
+        <h3 class="heading_1">Our Amenities and Services</h3>
+        <h1 class="heading">Comfort • Convenience • Relaxation</h1>
     </div>
 
-    <!-- FAMILY ROOM Modal -->
-    <div id="familyRoomModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeFamilyRoomModal()">&times;</span>
-            <div class="room-container">
-                <div class="room-image">
-                    <!-- Main Image -->
-                    <img id="familyMainImage" src="img/Standard Room.jpg" alt="Family Room">
-
-                    <!-- Thumbnails -->
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="img/R9.png" onclick="changeFamilyImage(this)" alt="Room 1">
-                        <img class="thumbnail" src="img/R7.png" onclick="changeFamilyImage(this)" alt="Room 2">
-                        <img class="thumbnail" src="img/R5.png" onclick="changeFamilyImage(this)" alt="Room 3">
-                    </div>
-                </div>
-
-                <div class="room-details">
-                    <h2>FAMILY ROOM</h2>
-                    <p class="room-price">₱6,800 / night</p>
-                    <h3>Amenities</h3>
-                    <ul>
-                        <li>4 Guests</li>
-                        <li>2 Beds</li>
-                        <li>Free Wi-Fi</li>
-                        <li>Air Conditioning</li>
-                        <li>Smart TV</li>
-                    </ul>
-                    <p class="room-description">
-                        A spacious and cozy room designed to comfortably accommodate families, offering ample space and essential amenities for a relaxing shared stay.
-                    </p>
-                </div>
-            </div>
+    <div class="boxes">
+        <div class="box">
+            <img src="icon/free-wifi.png" alt="Swimming Pool">
+            <h4>Free WiFi</h4>
+            <p>Stay connected with high-speed internet access throughout the hotel</p>
+        </div>
+        <div class="box">
+            <img src="icon/latte-art.png" alt="Free Wi‑Fi">
+            <h4>Coffee shop</h4>
+            <p>Relax and enjoy freshly brewed coffee, pastries, and a cozy atmosphere perfect for work or leisure.</p>
+        </div>
+        <div class="box">
+            <img src="icon/hall.png" alt="Coffee Shop">
+            <h4>Function Hall</h4>
+            <p>Host events, meetings, and gatherings in our spacious and fully equipped function hall, ideal for business or celebrations.</p>
+        </div>
+        <div class="box">
+            <img src="icon/parking-area.png" alt="Coffee Shop">
+            <h4>Parking area</h4>
+            <p>Enjoy convenient and secure parking with ample space for all guests, available 24/7 for stress-free arrivals and departures.</p>
+        </div>
+        <div class="box">
+            <img src="icon/24-hours-service.png" alt="Coffee Shop">
+            <h4>24/7 front desk</h4>
+            <p>Enjoy freshly brewed coffee and snacks in our cozy café area.</p>
         </div>
     </div>
+</section>
+
+
+
+<section id="functionHall" class="function-section">
+  <div class="function-container">
+
+    <!-- Function Hall Details (LEFT) -->
+    <div class="function-details">
+      <h2>M'M Function Hall & Banquet Rentals</h2>
+      <p class="function-description">
+        Host your weddings, corporate events, or private parties in style at our elegant function hall.
+        With versatile layouts, premium interiors, and attentive service, we ensure your event is seamless
+        and unforgettable.
+      </p>
+
+     <div class="function-inclusions">
+  <div class="inclusion-item">
+    <img src="icon/chair.png" alt="Tables and Chairs">
+    <p>Tables & Chairs</p>
+  </div>
+  <div class="inclusion-item">
+    <img src="icon/sound-system.png" alt="Sound System">
+    <p>Basic Sound System</p>
+  </div>
+  <div class="inclusion-item">
+    <img src="icon/projector.png" alt="Projector">
+    <p>Projector</p>
+  </div>
+</div>
+
+
+      <p class="function-hours"><strong>Extentions:</strong> 1,500 / hour </p>
+    </div>
+
+    <!-- Function Hall Images (RIGHT) 
+    <div class="function-images">
+      <div class="image-wrapper">
+        <img src="gallery/g17.jpg" alt="Banquet Setup 1" class="small-image">
+        <div class="hover-text">Wedding Setup</div>
+      </div>
+      <div class="image-wrapper">
+        <img src="gallery/g16.jpg" alt="Banquet Setup 2" class="small-image">
+        <div class="hover-text">Corporate Events</div>
+      </div>
+      <div class="image-wrapper">
+        <img src="gallery/g14.jpg" alt="Banquet Setup 3" class="small-image">
+        <div class="hover-text">Birthday & Parties</div>
+      </div>
+    </div>
+-->
+  </div>
+</section>
 
 
 
 
-    <!----------------------------------------------------- amenities and services----------------------------------------------------------->
 
-    <section class="sec amenities" id="amenities">
-        <div class="head">
-            <h3 class="heading_1">Our Amenities and Services</h3>
-            <h1 class="heading">Comfort • Convenience • Relaxation</h1>
-        </div>
+ <!------------------------------------------------- coffee Shop ---------------------------------------------------->
 
-        <div class="boxes">
-            <div class="box">
-                <img src="icon/free-wifi.png" alt="Swimming Pool">
-                <h4>Free WiFi</h4>
-                <p>Stay connected with high-speed internet access throughout the hotel</p>
-            </div>
-            <div class="box">
-                <img src="icon/latte-art.png" alt="Free Wi‑Fi">
-                <h4>Coffee shop</h4>
-                <p>Relax and enjoy freshly brewed coffee, pastries, and a cozy atmosphere perfect for work or leisure.</p>
-            </div>
-            <div class="box">
-                <img src="icon/hall.png" alt="Coffee Shop">
-                <h4>Function Hall</h4>
-                <p>Host events, meetings, and gatherings in our spacious and fully equipped function hall, ideal for business or celebrations.</p>
-            </div>
-            <div class="box">
-                <img src="icon/parking-area.png" alt="Coffee Shop">
-                <h4>Parking area</h4>
-                <p>Enjoy convenient and secure parking with ample space for all guests, available 24/7 for stress-free arrivals and departures.</p>
-            </div>
-            <div class="box">
-                <img src="icon/24-hours-service.png" alt="Coffee Shop">
-                <h4>24/7 front desk</h4>
-                <p>Enjoy freshly brewed coffee and snacks in our cozy café area.</p>
-            </div>
-        </div>
-    </section>
+<section id="coffeeShop" class="coffee-section">
+  <div class="coffee-container">
+    <!-- Coffee Images -->
+    <div class="coffee-images">
+    <div class="image-wrapper">
+        <img id="mainCoffeeImage" src="img/latte-coffee.jpg" alt="Coffee Latte" class="main-image">
+        <div class="hover-text">Latte Coffee</div>
+    </div>
+</div>
 
-    <!------------------------------------------------- coffee Shop ---------------------------------------------------->
+    <!-- Coffee Details -->
+    <div class="coffee-details">
+      <h2>M'M Coffee Lounge</h2>
+      <p class="coffee-description">
+       From morning brews to evening cocktails, our Café Lounge transforms throughout the day. Enjoy specialty coffees, signature pastries, and a curated selection of cocktails—perfect for unwinding or socializing.
+      </p>
 
-    <section id="coffeeShop" class="coffee-section">
-        <div class="coffee-container">
-            <!-- Coffee Images -->
-            <div class="coffee-images">
-                <div class="image-wrapper">
-                    <img id="mainCoffeeImage" src="img/latte-coffee.jpg" alt="Coffee Latte" class="main-image">
-                    <div class="hover-text">Latte Coffee</div>
-                </div>
-            </div>
+      <h3>Popular Menu</h3>
+      <ul class="coffee-menu">
+        <li>Espresso</li>
+        <li>Cappuccino</li>
+        <li>Iced Latte</li>
+        <li>Milk Tea</li>
+        <li>Pastries & Desserts</li>
+      </ul>
 
-            <!-- Coffee Details -->
-            <div class="coffee-details">
-                <h2>MM Coffee Shop</h2>
-                <p class="coffee-description">
-                    Our cozy in-house coffee shop offers handcrafted beverages, freshly baked pastries, and a relaxing ambiance to enjoy your favorite drinks.
-                </p>
-
-                <h3>Popular Menu</h3>
-                <ul class="coffee-menu">
-                    <li>Espresso</li>
-                    <li>Cappuccino</li>
-                    <li>Iced Latte</li>
-                    <li>Milk Tea</li>
-                    <li>Pastries & Desserts</li>
-                </ul>
-
-                <p class="coffee-hours"><strong>Operating Hours:</strong> 7:00 AM – 10:00 PM</p>
-            </div>
-        </div>
-    </section>
+      <p class="coffee-hours"><strong>Operating Hours:</strong> 7:00 AM – 10:00 PM</p>
+    </div>
+  </div>
+</section>
 
 
 
@@ -270,15 +444,27 @@
 
 
     <!------------------------------------------------- ABOUT ---------------------------------------------------->
-    <section class="sec about" id="about">
-        <div class="head about_heading">
-            <h3 class="heading_1">About MM Hotel</h3>
-            <h1 class="heading">Redefining Comfort the <span>MM way</span></h1>
-            <p class="para">MM Hotel combines comfort, style, and luxury with a modern minimalist design. Our spaces feature clean lines, warm tones, and carefully curated details that create a relaxing and elegant atmosphere. Our signature loft-type rooms offer spacious,
-                minimalist layouts perfect for guests who value simplicity and premium comfort. Each room is designed for both functionality and a cozy, upscale feel. To elevate your stay, our in-house café serves freshly cooked meals, handcrafted pastries,
-                and signature drinks prepared daily by our talented Chef and Pastry Chef, all within a warm minimalist setting.</p>
+  <section class="sec about" id="about">
+    <div class="about_container">
+
+        <!-- ABOUT SECTION -->
+        <div class="about_heading">
+            <div>
+                <h3 class="heading_1">About MM Hotel</h3>
+                <h1 class="heading">Redefining Comfort the <span>MM way</span></h1>
+            </div>
+
+            <p class="para">
+               Welcome to M’M Hotel, where modern minimalist luxury meets warm Filipino hospitality. Guided by our promise of “Redefining comfort the M’M way,” we create spaces that feel refreshing, relaxing, and thoughtfully designed.
+Our signature loft-type rooms offer a unique and spacious stay, blending elegant interiors with functional comfort. Clean lines, warm tones, and curated details come together to create a serene atmosphere perfect for both leisure and business travelers.
+<br><br>
+Experience more than just a stay unwind at our Café Lounge & Bar, where you can enjoy handcrafted coffee, gourmet beverages, signature cocktails, and freshly made pastries crafted by our talented chef and pastry chef. It’s the ideal spot to relax, connect, or savor a quiet moment.
+At M’M Hotel, we are committed to delivering personalized and reliable service that elevates your stay from the moment you arrive. With convenient access to essential destinations and lifestyle spots, everything you need is always within reach.
+Stay with us and discover how we are truly redefining comfort— the M’M way.
+
         </div>
 
+        <!-- ABOUT IMAGES -->
         <div class="about_box">
             <div class="box1">
                 <img src="img/hotel1.jpg" alt="">
@@ -304,119 +490,233 @@
             <div class="box1">
                 <img src="img/funtionh.jpg" alt="">
                 <div class="box1_text">
-                    <p class="para1">A spacious and elegant function hall perfect for weddings, events, and corporate gatherings.</p>
+                    <p class="para1">Elegant function hall for weddings and events.</p>
                 </div>
             </div>
         </div>
-    </section>
 
+        <!-- GOLD DIVIDER -->
+        <div class="divider_line"></div>
 
+        <!-- WHY CHOOSE US SECTION -->
+        <div class="choose_section">
+            <h3 class="heading_1">Why Choose Us?</h3>
+            <h1 class="heading">Experience Comfort, Style & Exceptional Service</h1>
 
-    <section class="sec gallery" id="gallery">
-        <div class="head">
-            <h3 class="headinghome">GALLERY</h3>
+            <p class="para center">
+                At MM Hotel, every stay is designed with your comfort in mind. Our loft rooms, inviting spaces,
+                and reliable service create an experience that feels effortless and refreshing. We make your visit
+                smooth, comfortable, and truly memorable.
+            </p>
+
+            <div class="choose_items">
+                <div class="choose_item">
+                    <h3>Modern Comfort</h3>
+                    <p>Spacious loft rooms with warm minimalist interiors.</p>
+                </div>
+
+                <div class="choose_item">
+                    <h3>Warm Hospitality</h3>
+                    <p>Friendly, attentive, and personalized customer service.</p>
+                </div>
+
+                <div class="choose_item">
+                    <h3>Prime Location</h3>
+                    <p>Convenient access to lifestyle spots and essential areas.</p>
+                </div>
+
+                <div class="choose_item">
+                    <h3>Café Lounge & Bar</h3>
+                    <p>Handcrafted coffee, pastries, cocktails, and more.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Swiper container -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="gallery/g1.jpg" alt="Gallery Image 1"></div>
-                <div class="swiper-slide"><img src="gallery/g2.jpg" alt="Gallery Image 2"></div>
-                <div class="swiper-slide"><img src="gallery/g3.jpg" alt="Gallery Image 3"></div>
-                <div class="swiper-slide"><img src="gallery/g4.jpg" alt="Gallery Image 4"></div>
-                <div class="swiper-slide"><img src="gallery/g6.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g7.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g8.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g9.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g10.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g11.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g12.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g13.jpg" alt="Gallery Image 5"></div>
-                <div class="swiper-slide"><img src="gallery/g14.jpg" alt="Gallery Image 5"></div>
+    </div>
+</section>
 
+
+
+
+
+<!-- Lightbox Popup -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<section class="gallery-slider" id="gallery">
+    <div class="head">
+        <h3  class="heading_1">Our Gallery</h3>
+        <h1 class="heading"></h1>
+    </div>
+
+    <div class="swiper myGallerySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g1.jpg" alt="">
             </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g3.jpg" alt="">
+            </div>
 
-            <!-- Navigation arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g4.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g5.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g6.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g10.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g14.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g15.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide lightbox-trigger">
+                <img src="gallery/g16.jpg" alt="">
+            </div>
+
+             <div class="swiper-slide lightbox-trigger">
+                <img src="rooms/R1.jpg" alt="">
+            </div>
+
         </div>
-    </section>
+
+        <div class="swiper-pagination"></div>
+        
+
+        </div>
+
+    <!-- SEE MORE PHOTOS BUTTON -->
+    <div class="see-more-container" style="text-align:center; margin-top:20px;">
+        <a href="full-gallery.html" class="see-more-btn">See More Photos</a>
+    </div>
+
+        <script>
+var swiper = new Swiper(".myGallerySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
 
 
-    <script>
-        const swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 5, // 5 slides visible
-            loop: true,
-            spaceBetween: 20,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 700, // makes center pop out
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                // Responsive
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                },
-                1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                }
-            }
-        });
-    </script>
+    loop: false, // turn OFF infinite loop
+    allowSlidePrev: true,
+    allowSlideNext: true,
+
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 3,
+        slideShadows: false,
+    },
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+/* LIGHTBOX SCRIPT */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close-lightbox");
+
+document.querySelectorAll(".lightbox-trigger img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+
+
+    </div>
+</section>
+
+
+
+
+
+
 
 
 
     <!-- CONTACT -->
     <section class="sec contact" id="contact">
-        <div class="contact_box">
-            <div class="left_box">
-                <h2 class="heading_1">Contact Us</h2>
-                <h1 class="heading">Book your stay today!</h1>
-                <p class="para1">Have questions or want to make a reservation? We’re here to help anytime.</p>
-                <button class="btn btn1" onclick="openMessenger()">Contact Now</button>
+    <div class="contact_box">
+        
+        <div class="left_box">
+            <h2 class="heading_1">Contact Us</h2>
+            <h1 class="heading">Book your stay today!</h1>
+            <p class="para1">Have questions or want to make a reservation? We’re here to help anytime.</p>
+
+            <!-- Contact details added -->
+            <div class="contact_details">
+                <p><strong>📍 Location:</strong> 3rd Street Mabua, Tandag City, Surigao del Sur</p>
+                <p><strong>📧 Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mmreservationtandag@gmail.com&su=Room%20Booking%20Inquiry&body=Hello%2C%0D%0AI%20would%20like%20to%20inquire%20about%20booking%20a%20room.%0D%0A%0D%0AThank%20you." 
+                    target="_blank">mmreservationtandag@gmail.com</a></p>
+                <p><strong>📘 Facebook:</strong> 
+                    <a href="https://www.facebook.com/profile.php?id=61583191125175" target="_blank">MM Hotel </a>
+                </p>
+                <p><strong>📞 Contact No.:</strong> 09078874262 / 09078826694</p>
             </div>
-            <div class="right_box">
-                <a href="https://www.google.com/maps/@9.0676018,126.2040078,3a,90y,21.33h,77.93t/data=!3m7!1e1!3m5!1s9n06YfmXYC4ec4ZxZKiW8g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D12.070711981463546%26panoid%3D9n06YfmXYC4ec4ZxZKiW8g%26yaw%3D21.333008899438855!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank">
-                    <div class="img_wrapper">
-                        <img src="img/bg1.png" alt="">
-                        <div class="hover_text">View Location</div>
-                    </div>
-                </a>
-            </div>
 
-            <script>
-                function openMessenger() {
-                    // Replace 'yourpageusername' with your Facebook Page username
-                    window.open('https://www.facebook.com/profile.php?id=61583191125175', '_blank');
-                }
-            </script>
-
-
+            <button class="btn btn1" onclick="openMessenger()">Contact Now</button>
         </div>
+
+        <div class="right_box">
+            <a href="https://www.google.com/maps/@9.0676018,126.2040078,3a,90y,21.33h,77.93t/data=!3m7!1e1!3m5!1s9n06YfmXYC4ec4ZxZKiW8g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D12.070711981463546%26panoid%3D9n06YfmXYC4ec4ZxZKiW8g%26yaw%3D21.333008899438855!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <div class="img_wrapper">
+                    <img src="img/view1.png" alt="">
+                    <div class="hover_text">View Location</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function openMessenger() {
+    // Replace 'yourpageusername' with your Facebook Page username
+    window.open('https://www.facebook.com/profile.php?id=61583191125175', '_blank');
+}
+</script>
+
+
+</div>
     </section>
 
 
@@ -433,7 +733,7 @@
                 </div>
                 <p class="footer_text">Your comfort and satisfaction are our priority. Experience the best hotel stay with us.</p>
                 <ul class="footer_socials">
-                    <a href="https://www.facebook.com/profile.php?id=61583191125175" target="_blank"><i class="ri-google-fill"></i>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mmreservationtandag@gmail.com&su=Room%20Booking%20Inquiry&body=Hello%2C%0D%0AI%20would%20like%20to%20inquire%20about%20booking%20a%20room.%0D%0A%0D%0AThank%20you." target="_blank"><i class="ri-google-fill"></i>
                     <a href="https://www.facebook.com/profile.php?id=61583191125175" target="_blank"><i class="ri-facebook-fill"></i>
                     <li><a href="#"><i class=""></i></a></li>
                 </ul>
@@ -476,5 +776,4 @@
     <span class="top" id="to-top"><i class="ri-arrow-up-circle-line"></i></span>
     <script src="index.js"></script>
 </body>
-
 </html>

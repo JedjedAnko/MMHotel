@@ -46,7 +46,9 @@ menuBtn.addEventListener('click',(e)=>{
 })
 
 
-// Modal functionality
+
+
+//****************************************************************************************ROOM  Modal functionality
 function openRoomModal() {
   document.getElementById("roomModal").style.display = "block";
 }
@@ -74,7 +76,9 @@ function changeImage(element) {
 
 
 
-// FAMILY ROOM Modal Functions
+
+
+//************************************************************************************** FAMILY ROOM Modal Functions
 function openFamilyRoomModal() {
   document.getElementById("familyRoomModal").style.display = "block";
 }
@@ -90,6 +94,8 @@ window.onclick = function(event) {
   }
 }
 
+
+
 // Change main image for FAMILY ROOM
 function changeFamilyImage(element) {
   const mainImage = document.getElementById("familyMainImage");
@@ -101,6 +107,40 @@ function changeFamilyImage(element) {
 }
 
 
+
+
+
+/************************************************************************************** fUNCTIONHALL MODAL 
+function openFunctionHallModal() {
+  document.getElementById("FunctionHallModal").style.display = "block";
+}
+
+function closeFunctionHallModal() {
+  document.getElementById("FunctionHallModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const familyModal = document.getElementById("FunctionHallModal");
+  if (event.target === familyModal) {
+    familyModal.style.display = "none";
+  }
+}
+
+// Change main image for FAMILY ROOM
+function changeFunctionHallImage(element) {
+  const mainImage = document.getElementById("FunctionHallImage");
+  mainImage.src = element.src;
+
+  // Highlight the active thumbnail
+  document.querySelectorAll('#FunctionHallModal .thumbnail').forEach(img => img.classList.remove('active'));
+  element.classList.add('active');
+}
+
+*************************** fUNCTIONHALL MODAL **/
+
+
+
+/////***********************************************************************VIDEO MODAL
 
 const openVideo = document.getElementById("openVideo");
 const closeVideo = document.getElementById("closeVideo");
@@ -127,3 +167,6 @@ function changeCoffeeImage(element) {
     const mainImage = document.getElementById('mainCoffeeImage');
     mainImage.src = element.src;
 }
+
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #D4AF37;
+            margin: 40px 0 20px 0;
+            font-size: 2.5em;
+        }
+
+        /* Grid layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 90%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-block;
+            margin: 20px auto 40px auto;
+            padding: 12px 25px;
+            background-color: #D4AF37;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            width: max-content;
+            text-align: center;
+        }
+
+        .back-btn:hover {
+            background-color: #fff;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
+        }
+
+        /* Lightbox modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox .close-lightbox:hover {
+            color: #D4AF37;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Full Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="gallery/g1.jpg" alt="Gallery Image">
+        <img src="gallery/g3.jpg" alt="Gallery Image">
+        <img src="gallery/g4.jpg" alt="Gallery Image">
+        <img src="gallery/g5.jpg" alt="Gallery Image">
+        <img src="gallery/g6.jpg" alt="Gallery Image">
+        <img src="gallery/g7.jpg" alt="Gallery Image">
+        <img src="gallery/g9.jpg" alt="Gallery Image">
+        <img src="gallery/g10.jpg" alt="Gallery Image">
+        <img src="gallery/g11.jpg" alt="Gallery Image">
+        <img src="gallery/g13.jpg" alt="Gallery Image">
+        <img src="gallery/g14.jpg" alt="Gallery Image">
+        <img src="gallery/g15.jpg" alt="Gallery Image">
+        <img src="gallery/g16.jpg" alt="Gallery Image">
+        <img src="gallery/g17.jpg" alt="Gallery Image">
+    </div>
+
+    <a href="index.html#gallery" class="back-btn">Back to Gallery</a>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        // Open lightbox when clicking any image
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        // Close lightbox
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
