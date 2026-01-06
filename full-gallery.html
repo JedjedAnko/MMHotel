@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #000000;
         }
 
         h2 {
@@ -29,9 +29,11 @@
             padding-bottom: 50px;
         }
 
+        /* ✅ SAME SIZE IMAGES */
         .gallery-grid img {
             width: 100%;
-            height: auto;
+            height: 250px;          /* uniform height */
+            object-fit: cover;      /* crop without stretching */
             border-radius: 1px;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -42,9 +44,16 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            .gallery-grid img {
+                height: 200px;
+            }
+        }
+
         /* Back button */
         .back-btn {
-            display: inline-block;
+            display: block;
             margin: 20px auto 40px auto;
             padding: 12px 25px;
             background-color: #D4AF37;
@@ -53,7 +62,6 @@
             border-radius: 1px;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: block;
             width: max-content;
             text-align: center;
         }
@@ -76,7 +84,6 @@
             background-color: rgba(0,0,0,0.9);
             justify-content: center;
             align-items: center;
-            overflow: auto;
         }
 
         .lightbox img {
@@ -85,7 +92,7 @@
             border-radius: 10px;
         }
 
-        .lightbox .close-lightbox {
+        .close-lightbox {
             position: absolute;
             top: 20px;
             right: 35px;
@@ -93,86 +100,138 @@
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
         }
 
-        .lightbox .close-lightbox:hover {
+        .close-lightbox:hover {
             color: #D4AF37;
         }
     </style>
 </head>
 <body>
 
-    <h2>Full Gallery</h2>
+<h2>Full Gallery</h2>
 
-    <div class="gallery-grid">
-        <img src="gallery/g1.jpg" alt="Gallery Image">
-        <img src="gallery/g3.jpg" alt="Gallery Image">
-        <img src="gallery/g4.jpg" alt="Gallery Image">
-        <img src="gallery/g5.jpg" alt="Gallery Image">
-        <img src="gallery/g6.jpg" alt="Gallery Image">
-        <img src="gallery/g7.jpg" alt="Gallery Image">
-        <img src="gallery/g9.jpg" alt="Gallery Image">
-        <img src="gallery/g10.jpg" alt="Gallery Image">
-        <img src="gallery/g11.jpg" alt="Gallery Image">
-        <img src="gallery/g13.jpg" alt="Gallery Image">
-        <img src="gallery/g14.jpg" alt="Gallery Image">
-        <img src="gallery/g15.jpg" alt="Gallery Image">
-        <img src="gallery/g16.jpg" alt="Gallery Image">
-        <img src="gallery/g17.jpg" alt="Gallery Image">
-        <img src="img/backg.png" alt="Gallery Image">
-        <img src="img/background.jpg" alt="Gallery Image">
-        <img src="img/bg1.png" alt="Gallery Image">
-        <img src="img/funtionh.jpg" alt="Gallery Image">
-        <img src="img/hotel1.jpg" alt="Gallery Image">
-        <img src="img/hotel2.jpg" alt="Gallery Image">
-        <img src="img/hotel3.jpg" alt="Gallery Image">
-        <img src="img/mmbg.png" alt="Gallery Image">
-        <img src="img/R1.png" alt="Gallery Image">
-        <img src="img/R2.png" alt="Gallery Image">
-        <img src="img/R3.png" alt="Gallery Image">
-        <img src="img/R4.png" alt="Gallery Image">
-        <img src="img/R5.png" alt="Gallery Image">
-        <img src="img/R6.png" alt="Gallery Image">
-        <img src="img/R7.png" alt="Gallery Image">
-        <img src="img/R8.png" alt="Gallery Image">
-        <img src="img/R9.png" alt="Gallery Image">
-        <img src="img/view1.png" alt="Gallery Image">
+<div class="gallery-grid">
+    <img src="gallery/h.jpg">
+  <img src="gallery/galire/1.jpg">
+  <img src="gallery/galire/2.jpg">
+  <img src="gallery/galire/3.jpg">
+  <img src="gallery/galire/4.jpg">
+  <img src="gallery/galire/5.jpg">
+  <img src="gallery/galire/6.jpg">
+  <img src="gallery/galire/7.jpg">
+  <img src="gallery/galire/8.jpg">
+  <img src="gallery/galire/9.jpg">
+  <img src="gallery/galire/10.jpg">
+  <img src="gallery/galire/11.jpg">
+  <img src="gallery/galire/12.jpg">
+  <img src="gallery/galire/13.jpg">
+  <img src="gallery/galire/14.jpg">
+  <img src="gallery/galire/15.jpg">
+  <img src="gallery/galire/16.jpg">
+  <img src="gallery/galire/17.jpg">
+  <img src="gallery/galire/18.jpg">
+  <img src="gallery/galire/19.jpg">
+  <img src="gallery/galire/20.jpg">
+  <img src="gallery/galire/21.jpg">
+  <img src="gallery/galire/22.jpg">
+  <img src="gallery/galire/23.jpg">
+  <img src="gallery/galire/25.jpg">
+  <img src="gallery/galire/26.jpg">
+  <img src="gallery/galire/27.jpg">
+  <img src="gallery/galire/28.jpg">
+  <img src="gallery/galire/29.jpg">
+  <img src="gallery/galire/30.jpg">
+  <img src="gallery/galire/31.jpg">
+  <img src="gallery/galire/32.jpg">
+  <img src="gallery/galire/33.jpg">
+  <img src="gallery/galire/34.jpg">
+  <img src="gallery/galire/35.jpg">
+  <img src="gallery/galire/36.jpg">
+  <img src="gallery/galire/37.jpg">
+  <img src="gallery/galire/38.jpg">
+  <img src="gallery/galire/39.jpg">
+  <img src="gallery/galire/40.jpg">
+  <img src="gallery/galire/41.jpg">
+  <img src="gallery/galire/42.jpg">
+  <img src="gallery/galire/43.jpg">
+  <img src="gallery/galire/44.jpg">
+  <img src="gallery/galire/45.jpg">
+    <img src="gallery/h1.jpg">
+    <img src="gallery/h4.jpg">
+    <img src="gallery/h5.jpg">
+    <img src="gallery/h6.jpg">
+    <img src="gallery/h7.jpg">
+    <img src="gallery/h9.jpg">
+    <img src="gallery/h10.jpg">
+    <img src="gallery/hh.jpg">
+    <img src="gallery/r1.jpg">
+    <img src="gallery/r2.jpg">
+    <img src="gallery/r3.jpg">
+    <img src="gallery/r4.jpg">
+    <img src="gallery/g1.jpg">
+    <img src="gallery/g3.jpg">
+    <img src="gallery/g4.jpg">
+    <img src="gallery/g5.jpg">
+    <img src="gallery/g6.jpg">
+    <img src="gallery/g7.jpg">
+    <img src="gallery/g9.jpg">
+    <img src="gallery/g10.jpg">
+    <img src="gallery/g11.jpg">
+    <img src="gallery/g13.jpg">
+    <img src="gallery/g14.jpg">
+    <img src="gallery/g15.jpg">
+    <img src="gallery/g16.jpg">
+    <img src="gallery/g17.jpg">
+    <img src="img/backg.png">
+    <img src="img/background.jpg">
+    <img src="img/bg1.png">
+    <img src="img/funtionh.jpg">
+    <img src="img/hotel1.jpg">
+    <img src="img/hotel2.jpg">
+    <img src="img/hotel3.jpg">
+    <img src="img/mmbg.png">
+    <img src="img/R1.png">
+    <img src="img/R2.png">
+    <img src="img/R3.png">
+    <img src="img/R4.png">
+    <img src="img/R5.png">
+    <img src="img/R6.png">
+    <img src="img/R7.png">
+    <img src="img/R8.png">
+    <img src="img/R9.png">
+    <img src="img/view1.png">
+</div>
 
-    </div>
+<a href="index.html#home" class="back-btn">Back to Home</a>
 
-    <a href="index.html#gallery" class="back-btn">Back to Gallery</a>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img">
+</div>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Expanded Image">
-    </div>
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
-    <script>
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.querySelector('.close-lightbox');
-
-        // Open lightbox when clicking any image
-        document.querySelectorAll('.gallery-grid img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-            });
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
         });
+    });
 
-        // Close lightbox
-        closeBtn.addEventListener('click', () => {
+    document.querySelector('.close-lightbox').onclick = () => {
+        lightbox.style.display = 'none';
+    };
+
+    lightbox.onclick = e => {
+        if (e.target === lightbox) {
             lightbox.style.display = 'none';
-        });
+        }
+    };
+</script>
 
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
