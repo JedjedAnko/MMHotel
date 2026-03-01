@@ -47,6 +47,8 @@ header::before {
 html {
     scroll-behavior: smooth;
 }
+
+
 .navbar .logo span {
     color: #D4AF37;
     font-weight: bold;
@@ -79,9 +81,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
-    top: 0;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 .navbar.scrolled{
     background-color: #000;
@@ -304,46 +308,6 @@ html {
   border: none;
   cursor: pointer;
 }
-
-
-
-.booking-section {
-  padding: 80px 20px;
-  background: rgba(0,0,0,0.6);
-  text-align: center;
-}
-
-.booking-title {
-  color: #000000;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.booking-form {
-  max-width: 600px;
-  margin: auto;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  
-}
-
-.booking-form textarea {
-  resize: none;
-  height: 100px;
-}
-
 
 
 
@@ -941,13 +905,42 @@ html {
   box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
 
-/* ===== RESPONSIVE (TABLET & MOBILE) ===== */
+/* ===== MOBILE PHONES (ALL SIZES) ===== */
 @media (max-width: 768px) {
+
+  .luxury-section {
+    padding: 50px 15px;
+  }
+
   .luxury-content {
     grid-template-columns: 1fr;
   }
 
-  /* Horizontal gold line on mobile */
+  .luxury-card {
+    min-height: 280px;
+    width: 100%;
+  }
+
+  .overlay {
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .overlay h3 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .overlay .description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .overlay .hours {
+    font-size: 14px;
+  }
+
+  /* Divider becomes horizontal */
   .gold-divider {
     height: 3px;
     width: 100%;
@@ -958,19 +951,34 @@ html {
       #d4af37,
       transparent
     );
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
   }
 
-  .luxury-card {
-    min-height: 320px;
-  }
-
-  .overlay {
-    text-align: center;
-    align-items: center;
+  .toggle {
+    font-size: 12px;
+    padding: 6px 14px;
+    gap: 10px;
   }
 }
 
+/* ===== VERY SMALL PHONES (iPhone SE, etc.) ===== */
+@media (max-width: 400px) {
+
+  .luxury-card {
+    min-height: 250px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .luxury-header h2 {
+    font-size: 22px;
+  }
+
+  .overlay h3 {
+    font-size: 20px;
+  }
+}
 
 
 
@@ -1779,6 +1787,54 @@ html {
 }
 
 
+/* Modal Background */
+.modal {
+  display: none;              /* hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content Box */
+.modal_content {
+  background: #111;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Video inside modal */
+.modal_content video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 35px;
+  color: red;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+}
+
+.close:hover {
+  color: white;
+}
+
 
 /********************************************* GALLERY***********************************************/
 /* -------------------------
@@ -1908,7 +1964,8 @@ html {
     grid-template-columns: repeat(4, 1fr);
 }
 .footer_logo img{
-    max-width: 35px;
+    max-width: 65px;
+    margin-right: 10%;
 }
 .footer_logo span{
     display: flex;
