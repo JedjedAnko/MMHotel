@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0%;
@@ -25,7 +26,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(img/mmbg.png);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(img/mmbg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -71,7 +72,7 @@ html {
     align-items: center;
 }
 .logo img{
-    width: 60px;
+    width: 85px;
     margin-left: 10%;
 }
 .navbar{
@@ -108,6 +109,7 @@ html {
     padding: 1em;
 }
 .nav_items li a{
+    display: block;
     text-decoration: none;
     transition: 0.3s;
     font-size: 12px;
@@ -126,6 +128,62 @@ html {
 .nav_items li:hover::before{
     width: 100%;
 }
+
+/* Dropdown */
+/*.dropdown {
+    position: relative;
+}
+
+.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown > a i {
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #111;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: .3s ease;
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #D4AF37;
+    color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+   transform: translateY(0);
+} */
+
 .btn{
     padding: 9px 15px;
     font-size: 18px;
@@ -427,8 +485,58 @@ html {
     border: 2px solid #D4AF37;
 }
 
+.guest-rate {
+    background: #f7f7f7;
+    padding: 15px 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #D4AF37;
+}
 
+.guest-rate h4 {
+    margin: 0 0 10px;
+    color: #D4AF37;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
+.guest-rate p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #333;
+}
+
+.amenities-box {
+    margin-top: 5px;
+}
+
+.amenities-box h3 {
+    color: #D4AF37;
+    font-size: 18px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amenities-list li {
+    padding: 2px 0;        /* space between each item */
+    line-height: 0.5;      /* text height spacing */
+    font-size: 15px;
+    color: #333;
+}
+
+.amenities-list li::before {
+    content: "✓";
+    color: #D4AF37;
+    font-weight: bold;
+    margin-right: 10px;
+}
 
 /****************************************** Modal background ******************************************************************/
 .modal {
@@ -464,7 +572,8 @@ html {
 }
 
 .modal .close:hover {
-  color: #000;
+    color:#EFBF04;
+    transform:rotate(90deg);
 }
 
 /* Room layout inside modal */
@@ -483,14 +592,14 @@ html {
 /* Main image fixed size */
 #mainImage {
   width: 450px;
-  height: 300px;
+  height: 450px;
   object-fit: cover;
   border-radius: 3px;
 }
 
 #familyMainImage {
   width: 450px;
-  height: 300px;
+  height: 450px;
   object-fit: cover;
   border-radius: 3px;
 }
@@ -535,7 +644,7 @@ html {
   color: #333;
 }
 .room-details h3 {
-  margin-top: 20px;
+  margin-top: 5px;
   color: #333;
 }
 
@@ -584,846 +693,744 @@ html {
 .head{
     text-align: center;
 }
+
 .heading span{
     color: #D4AF37;
 }
+
 .head .heading{
-    font-family: 'lato', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
+
 .head .heading_1{
-    font-family: '"Prata"', cursive;
+    font-family: 'Prata', serif;
     color: #e0e0e0;
     font-size: 2em;
 }
+
 .boxes{
     margin-top: 2rem;
     display: grid;
-    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
+
 .box{
+    width: 100%;
     text-align: center;
-    padding: 5% 0;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #1a1110;
     border: 2px solid transparent;
-    border-radius: 10px; /* Rounded corners for nicer 3D effect */
-    box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.3),  /* bottom shadow */
-        0 8px 20px rgba(0, 0, 0, 0.2), /* deeper shadow for depth */
-        0 12px 40px rgba(0, 0, 0, 0.1); /* soft outer shadow */
-    background-color: #1a1110; /* optional: dark background */
-    transition: all 0.3s ease; /* smooth animation */
+    box-sizing: border-box;
+    box-shadow:
+        0 4px 6px rgba(0,0,0,.3),
+        0 8px 20px rgba(0,0,0,.2),
+        0 12px 40px rgba(0,0,0,.1);
+    transition: .3s;
 }
+
 .box img{
-    width: 100px;
+    width: 80px;
+    max-width: 100%;
 }
-.box p{
-    max-width: 275px;
-    margin-inline: auto;
-    text-align: center;
-    line-height: 1.75rem;
-    color: #bdbdbd;
-}
+
 .box h4{
-    margin: 1rem;
-    font-size: 1.7rem;
-    font-weight: 700;
+    margin: 15px 0 10px;
+    font-size: 1.4rem;
 }
+
+.box p{
+    max-width: 100%;
+    margin: auto;
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+
 .box:hover{
-    transform: translateY(-10px) scale(1.05); /* lifts box for 3D effect */
-    border: 2px solid #D4AF37; /* gold hover border */
-    box-shadow: 
-        0 8px 12px rgba(0, 0, 0, 0.4),
-        0 12px 24px rgba(0, 0, 0, 0.3),
-        0 16px 48px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    transform: translateY(-8px);
+    border-color:#D4AF37;
 }
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .boxes{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:8px;
+    }
+
+    .box{
+        padding:10px 5px;
+    }
+
+    .box img{
+        width:40px;
+    }
+
+    .box h4{
+        font-size:.75rem;
+        margin:8px 0;
+    }
+
+    .box p{
+        display:none;
+    }
+}
+
 
 
 
 
 /*********************************************** FUNCTION HALL SECTION ************************************/
-/* Function Hall Section */
-.function-section {
-  padding: 40px 0;
-  background: #000000;
-  font-family: Arial, sans-serif;
+.function-section{
+    padding:100px 8%;
+    background:#000;
+    color:#fff;
 }
 
-.function-container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center; /* Center all text */
-  padding: 25px;
-  border: 2px solid #d4af37; /* GOLD BORDER */
-  border-radius: 1px;
-  
-  /* Background image settings */
-  background-image: url("gallery/g9.jpg"); /* <-- replace with your image path */
-  background-size: cover;       /* Makes image cover the whole container */
-  background-position: center;  /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  
-  /* Optional dark overlay to improve text readability */
-  position: relative;
-  padding: 25px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* gold glow */
-  
+.function-wrapper{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.function-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
-  z-index: 0;
-  border-radius: 4px;
+/* Image */
+
+.function-image{
+    overflow:hidden;
+    border-radius:1px;
 }
 
-.function-details {
-  position: relative;
-  z-index: 1;
+.function-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    display:block;
+    transition:.6s ease;
 }
 
-/* Header Font */
-.function-details h2 {
-  font-family: "Prata", serif;
-  color: #d4af37;
-  font-size: 35px;
-  margin-bottom: 15px;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 
-               0 0 12px rgba(0, 0, 0, 0.9); /* MUCH DARKER */
+.function-image:hover img{
+    transform:scale(1.08);
 }
 
-/* Description */
-.function-description {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 
-               0 0 10px rgba(0, 0, 0, 1);  /* DEEP SHADOW */
+/* Content */
+
+.function-content .tagline{
+    color:#EFBF04;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:.9rem;
 }
 
-/* Pricing Section */
-.function-pricing p {
-  font-size: 16px;
-  margin: 5px 0;
-  font-weight: 600;
-  color: #d4af37;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 
-               0 0 10px rgba(0, 0, 0, 1);  /* STRONG DARK SHADOW */
+.function-content h2{
+    font-size:3rem;
+    margin:15px 0;
+    font-family:"Prata", serif;
 }
 
-
-/* Inclusions Section */
-.function-inclusions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* allow items to wrap on smaller screens */
-  gap: 25px;
-  margin-top: 25px;
+.function-content .description{
+    color:#bbb;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
-.inclusion-item {
-  flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, base width: 200px */
-  max-width: 220px;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2); /* semi-transparent */
-  border: 2px solid #d4af37;
-  border-radius: 1px;
-  text-align: center;
-  transition: 0.3s ease;
+/* Event List */
 
-  /* Add blur effect */
-  backdrop-filter: blur(1px); /* adjust blur intensity */
-  -webkit-backdrop-filter: blur(1px); /* for Safari support */
+.event-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px 35px;
+    margin-bottom:35px;
 }
 
-
-.inclusion-item:hover {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.event-list div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#eee;
+    font-size:16px;
 }
 
-.inclusion-item img {
-  width: 80px; /* smaller on smaller screens */
-  height: 80px;
-  margin-bottom: 10px;
-  filter: brightness(0) invert(1);
+.event-list div::before{
+    content:"✓";
+    width:22px;
+    height:22px;
+    color:#EFBF04;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:bold;
+    flex-shrink:0;
 }
 
-/* Responsive text */
-.inclusion-item p {
-  font-size: 14px;
-  font-weight: 600;
-  color: #d4af37;
+/* Button */
+
+.function-content button{
+    background:#EFBF04;
+    color:#111;
+    border:none;
+    padding:14px 34px;
+    border-radius:1px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* Media queries for smaller screens */
-@media (max-width: 768px) {
-  .inclusion-item {
-    flex: 1 1 45%; /* 2 items per row */
-  }
-  .inclusion-item img {
-    width: 70px;
-    height: 70px;
-  }
+.function-content button:hover{
+    background:#fff;
+    transform:translateY(-3px);
 }
 
-@media (max-width: 480px) {
-  .inclusion-item {
-    flex: 1 1 100%; /* 1 item per row */
-  }
-  .inclusion-item img {
-    width: 60px;
-    height: 60px;
-  }
-  .inclusion-item p {
-    font-size: 13px;
-  }
+/* Responsive */
+
+@media(max-width:900px){
+
+    .function-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .function-image img{
+        height:350px;
+    }
+
+    .function-content h2{
+        font-size:2.3rem;
+    }
+
+    .event-list{
+        grid-template-columns:1fr;
+    }
+
 }
 
 
-
-
-
-/***************************************************************** Main Coffee Image **********************************************************/
-
-.luxury-section {
-  background: #000;
-  color: #d4af37;
-  padding: 60px 20px;
-  font-family: "Playfair Display", serif;
+.function-modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background:rgba(0,0,0,.85);
+    animation:fadeIn .3s;
 }
 
-/* ===== HEADER ===== */
-.luxury-header {
-  text-align: center;
-  margin-bottom: 40px;
+.function-modal-content{
+    background:#111;
+    color:#fff;
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
 
-.luxury-header h2 {
-  font-size: clamp(26px, 4vw, 3.5rem);
-  margin-bottom: 15px;
-  color: #d4af37;
-  font-family: "Prata", serif;
+.function-modal-content img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
 }
 
-/* ===== TOGGLE ===== */
-.toggle {
-  display: inline-flex;
-  gap: 20px;
-  border: 1px solid #d4af37;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 14px;
+.modal-body{
+    padding:30px;
 }
 
-.toggle span {
-  opacity: 0.6;
+.modal-tag{
+    color:#EFBF04;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:.85rem;
+    display:inline-block;
+    margin-bottom:8px;
 }
 
-.toggle .active {
-  opacity: 1;
-  font-weight: bold;
+.modal-body h2{
+    margin:0 0 15px;
+    font-size:2rem;
+    font-family:"Prata",serif;
 }
 
-/* ===== LAYOUT ===== */
-.luxury-content {
-  display: grid;
-  grid-template-columns: 1fr 2px 1fr;
-  min-height: 420px;
+.modal-description{
+    color:#ccc;
+    line-height:1.7;
+    font-size:15px;
+    margin-bottom:25px;
 }
 
-/* ===== CARDS ===== */
-.luxury-card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  min-height: 420px;
+/* Pricing Cards */
+
+.modal-pricing{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0;
 }
 
-.luxury-card.day {
-  background-image: url("img/coffee.png");
+.modal-pricing div{
+    background:#1b1b1b;
+    border:1px solid rgba(239,191,4,.25);
+    border-left:4px solid #EFBF04;
+    border-radius:8px;
+    padding:18px;
 }
 
-.luxury-card.night {
-  background-image: url("img/bar.jpg");
+.modal-pricing h4{
+    color:#EFBF04;
+    margin-bottom:8px;
+    text-transform:uppercase;
+    font-size:15px;
+    letter-spacing:1px;
 }
 
-
-/* ===== DESCRIPTION TEXT ===== */
-.overlay .description {
-  color: #f5f5f5;
-  font-size: clamp(19px, 1.2vw, 16px);
-  line-height: 1.7;
-  max-width: 420px;
-  margin-bottom: 18px;
+.modal-pricing p{
+    margin:0;
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
 }
 
-/* ===== OPERATING HOURS ===== */
-.overlay .hours {
-  font-size: 20px;
-  color: #d4af37;
-  letter-spacing: 0.5px;
+.modal-pricing p span{
+    font-size:14px;
+    color:#bbb;
+    font-weight:400;
 }
 
-.overlay .hours strong {
-  color: #fff;
+.modal-pricing small{
+    display:block;
+    margin-top:6px;
+    color:#999;
+    font-size:13px;
 }
 
+/* Section Titles */
 
-/* ===== OVERLAY ===== */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(20px, 5vw, 40px);
+.modal-body h3{
+    color:#EFBF04;
+    margin:25px 0 15px;
+    font-size:1.1rem;
+    border-bottom:1px solid rgba(239,191,4,.25);
+    padding-bottom:8px;
 }
 
-.overlay h3 {
-  font-size: clamp(32px, 3.2vw, 42px);
-  margin-bottom: clamp(16px, 3vw, 30px);
-  color: #fff;
-  line-height: 1.2;
+/* Lists */
+
+.modal-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px 25px;
+    margin-bottom:20px;
 }
 
-
-/* ===== GOLD DIVIDER ===== */
-.gold-divider {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #d4af37,
-    #d4af37,
-    transparent
-  );
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+.modal-list div{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:#ddd;
+    font-size:15px;
+    line-height:1.6;
 }
 
-/* ===== MOBILE PHONES (ALL SIZES) ===== */
-@media (max-width: 768px) {
-
-  .luxury-section {
-    padding: 50px 15px;
-  }
-
-  .luxury-content {
-    grid-template-columns: 1fr;
-  }
-
-  .luxury-card {
-    min-height: 280px;
-    width: 100%;
-  }
-
-  .overlay {
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .overlay h3 {
-    font-size: clamp(20px, 6vw, 28px);
-  }
-
-  .overlay .description {
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .overlay .hours {
-    font-size: 14px;
-  }
-
-  /* Divider becomes horizontal */
-  .gold-divider {
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      transparent,
-      #d4af37,
-      #d4af37,
-      transparent
-    );
-  }
-
-  .toggle {
-    font-size: 12px;
-    padding: 6px 14px;
-    gap: 10px;
-  }
+.modal-list div::before{
+    content:"✓";
+    color:#EFBF04;
+    font-weight:bold;
+    font-size:17px;
+    flex-shrink:0;
 }
 
-/* ===== VERY SMALL PHONES (iPhone SE, etc.) ===== */
-@media (max-width: 400px) {
-
-  .luxury-card {
-    min-height: 250px;
-  }
-
-  .overlay {
-    padding: 15px;
-  }
-
-  .luxury-header h2 {
-    font-size: 22px;
-  }
-
-  .overlay h3 {
-    font-size: 20px;
-  }
-}
-
-
-
-/************************************ MM Restaurant Single Layout ****************************************************/
-.restaurant-single {
-  padding: 0;
-  background: #000000;
-}
-
-.single-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 300px;
-  gap: 1px; /* space between text and images */
-  align-items: start; /* align content to top */
-}
-
-/* LEFT BLACK PANEL */
-.restaurant-text {
-  background: #000;
-  color: #fff;
-  padding: 50px 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* align text to top */
-}
-
-.restaurant-text .tagline {
-  color: #d4af37;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.restaurant-text h2 {
-  font-size: 45px;
-  font-family: 'Prata', serif;
-  margin-bottom: 20px;
-}
-
-.restaurant-text .description {
-  color: #ccc;
-  line-height: 1.2;
-  margin-bottom: 25px;
-  font-size: 18px;
-}
-
-.restaurant-text .features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.restaurant-text .features li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-/* BUTTON - Inline position, centered text */
-.btn-primary {
-    display: inline-block; /* keep original position */
-    padding: 12px 25px; /* updated padding */
-    background-color: #D4AF37;
-    color: #000;
-    font-weight: 600;
-    border-radius: 1px; /* subtle corners */
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid transparent; /* default border transparent */
-    text-align: center; /* center the text */
-    width: auto; /* width fits content */
-}
-
-/* Hover effect */
-.btn-primary:hover {
-    background-color: #000;
-    color: #D4AF37;
-    border: 2px solid #D4AF37;
-}
-
-
-
-/* RIGHT PANEL – THREE PORTRAIT IMAGES */
-.restaurant-image {
-  display: flex;
-  flex-direction: stretch;
-  gap: 12px;
-  align-items: center;
-  padding: 0;
-}
-
-/* Portrait images */
-.restaurant-image img {
-  width: clamp(230px, 16vw, 180px);  /* responsive width */
-  height: clamp(320px, 40vw, 450px); /* responsive height */
-  object-fit: cover;
-  border-radius: 1px;
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.restaurant-image img:hover {
-  transform: scale(1.05);
-}
-
-/* ========================= */
-/* RESPONSIVE BREAKPOINTS */
-/* ========================= */
-
-/* Tablet */
-@media (max-width: 900px) {
-  .single-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .restaurant-image {
-    flex-direction: row; /* side-by-side on tablet */
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-  }
-
-  .restaurant-image img {
-    width: 120px;
-    height: 200px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .restaurant-image {
-    gap: 8px;
-  }
-
-  .restaurant-image img {
-    width: 95px;
-    height: 150px;
-  }
-}
-
-
-/* ==================================================================
-   MENU MODAL
-================================================================== */
-.menu-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.88);
-  z-index: 9999;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-modal-content {
-  background: #1e1d1d;
-  width: 60%;
-  max-width: 780px;
-  min-width: 320px;
-  padding: 40px;
-  border-radius: 18px;
-  color: #fff;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 0 35px rgba(0,0,0,.8);
-  
+.modal-list small{
+    color:#999;
+    font-size:12px;
 }
 
 /* Close Button */
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 34px;
-  cursor: pointer;
-  color: #d4a251;
-  transition: .3s;
-}
-.close-modal:hover { color: #fff; }
 
-/* Title */
-.menu-title {
-  text-align: center;
-  font-size: 44px;
-  margin-bottom: 35px;
-  font-family: "Playfair Display", serif;
-  color: #D4AF37;
-  letter-spacing: 2px;
+.close-modal{
+    position:absolute;
+    top:12px;
+    right:18px;
+    font-size:35px;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    line-height:1;
 }
 
-/* ==================================================================
-   MENU TABS
-================================================================== */
-.menu-nav {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #2c2c2c;
+.close-modal:hover{
+    color:#EFBF04;
+    transform:rotate(90deg);
 }
 
-.menu-tab {
-  background: transparent;
-  color: #d4a251;
-  border: 1px solid #d4a251;
-  padding: 10px 22px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: .35s ease;
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
-.menu-tab:hover,
-.menu-tab.active {
-  background: linear-gradient(135deg,#d4a251,#f5d88c);
-  color: #000;
-  box-shadow: 0 0 12px rgba(212,162,81,.6);
+/* Responsive */
+
+@media(max-width:768px){
+
+    .function-modal-content{
+        width:95%;
+        max-width:95%;
+    }
+
+    .function-modal-content img{
+        height:200px;
+    }
+
+    .modal-body{
+        padding:20px;
+    }
+
+    .modal-body h2{
+        font-size:1.7rem;
+    }
+
+    .modal-description{
+        font-size:14px;
+    }
+
+    .modal-pricing,
+    .modal-list{
+        grid-template-columns:1fr;
+    }
+
+    .modal-pricing p{
+        font-size:18px;
+    }
+
 }
 
-/* ==================================================================
-   TAB CONTENT
-================================================================== */
-.menu-content {
-  display: none;
-  animation: fadeUp .4s ease;
+
+/************************************ MM Restaurant Single Layout ****************************************************/
+/* ===========================
+   DINING SECTION
+=========================== */
+
+.restaurant-single{
+    background:#000;
+    padding:80px 0;
 }
 
-.menu-content.active {
-  display: block;
+.single-layout{
+    display:grid;
+    grid-template-columns:45% 50%;
+    align-items:center;
+    gap: 20px;
 }
 
-/* ==================================================================
-   SECTION GROUPS
-================================================================== */
-.section-group,
-.section-container {
-  margin-bottom: 35px;
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.restaurant-text{
+    color:#fff;
+    padding:20px 50px;
 }
 
-/* Cursive Titles */
-.cursive-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: #D4AF37;
-  margin-bottom: 12px;
-  border-bottom: 1px solid rgba(255,255,255,.15);
-  padding-bottom: 6px;
+.restaurant-text .tagline{
+    display:inline-block;
+    color:#D4AF37;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:15px;
 }
 
-.cursive-title small {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-style: italic;
-  color: #ccc;
-  margin-left: 8px;
+.restaurant-text h2{
+    font-family:"Prata", serif;
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:25px;
 }
 
-/* ==================================================================
-   MENU LIST
-================================================================== */
-.menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  padding: 6px 0;
-  border-bottom: 1px dashed rgba(255,255,255,.15);
-}
-
-.menu-row span:first-child {
-  max-width: 80%;
-}
-
-/* ==================================================================
-   PRICE ELEMENTS (TOGGLE READY)
-================================================================== */
-.price,
-.price-val,
-.price-group,
-.selling-price-header,
-.addon-col span {
-  display: none;
-}
-
-.show-prices .price,
-.show-prices .price-val,
-.show-prices .price-group,
-.show-prices .selling-price-header,
-.show-prices .addon-col span {
-  display: inline-flex;
-  color: #d4a251;
-  font-weight: bold;
-}
-
-/* ==================================================================
-   COFFEE GRID
-================================================================== */
-.pricing-grid.classic {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr;
-  gap: 6px;
-}
-
-.grid-label.dark-bg {
-  background: #000;
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  text-align: center;
-  padding: 4px 0;
-}
-
-.size-subheader {
-  display: flex;
-  justify-content: space-around;
-  font-size: 11px;
-  font-weight: bold;
-  color: #aaa;
-}
-
-.item-row {
-  display: contents;
-}
-
-.item-name {
-  font-size: 13px;
-  padding: 7px 0;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.price-group,
-.price-val {
-  justify-content: space-around;
-  text-align: center;
-}
-
-/* FRAPPE GRID */
-.pricing-grid.frappe {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  gap: 10px;
-}
-
-/* ==================================================================
-   ADD ONS
-================================================================== */
-.addon-footer {
-  border-top: 1px solid rgba(255,255,255,.2);
-  margin-top: 35px;
-  padding-top: 15px;
-}
-
-.addon-title {
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: #d4a251;
-  margin-bottom: 10px;
-}
-
-.addon-flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.addon-col p {
-  font-size: 13px;
-  font-style: italic;
-  margin: 4px 0;
-}
-
-/* ======================================================
-   CUSTOM MODAL SCROLLBAR
-====================================================== */
-
-/* Firefox */
-.menu-modal-content {
-  scrollbar-width: thin;
-  scrollbar-color: #d4a251 #1e1d1d;
-}
-
-/* Chrome, Edge, Safari */
-.menu-modal-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.menu-modal-content::-webkit-scrollbar-track {
-  background: #1e1d1d;
-  border-radius: 10px;
-}
-
-.menu-modal-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d4a251, #f5d88c);
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-.menu-modal-content::-webkit-scrollbar-thumb:hover {
-  background: #f5d88c;
+.restaurant-text .description{
+    color:#bdbdbd;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:30px;
 }
 
 
 
-/* ==================================================================
-   ANIMATION
-================================================================== */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+.features{
+    list-style:none;
+    padding:0;
+    margin:0 0 35px;
 }
 
-/* ==================================================================
-   RESPONSIVE
-================================================================== */
-@media (max-width: 1024px) {
-  .menu-modal-content {
-    width: 95%;
-    padding: 30px;
-  }
-  .menu-title {
-    font-size: 34px;
-  }
+.features li{
+    margin-bottom:14px;
+    color:#ddd;
+    font-size:17px;
 }
 
-@media (max-width: 600px) {
-  .menu-title {
-    font-size: 26px;
-  }
-  .menu-row {
-    font-size: 13px;
-  }
+/* Button */
+
+.btn-primary{
+    display:inline-block;
+    padding:14px 34px;
+    background:#D4AF37;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+    border:2px solid #D4AF37;
 }
 
+.btn-primary:hover{
+    background:transparent;
+    color:#D4AF37;
+}
+
+/* ===========================
+   IMAGE GRID
+=========================== */
+
+.restaurant-image{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+/* Card */
+
+.restaurant-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:1px;
+    text-decoration:none;
+    height:260px;
+}
+
+/* Image */
+
+.restaurant-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+/* Overlay */
+
+.restaurant-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.15));
+    transition:.4s;
+}
+
+/* Text */
+
+.restaurant-card h3{
+    position:absolute;
+    left:25px;
+    bottom:35px;
+    color:#fff;
+    z-index:2;
+    margin:0;
+    font-size:28px;
+    font-family:"Prata", serif;
+    transition:.4s;
+}
+
+/*.restaurant-card span{
+    position:absolute;
+    left:25px;
+    bottom:20px;
+    color:#D4AF37;
+    letter-spacing:2px;
+    font-size:13px;
+    text-transform:uppercase;
+    z-index:2;
+    opacity:0;
+    transition:.4s;
+}*/
+/* Description */
+
+.restaurant-card p{
+    position:absolute;
+    left:25px;
+    right:25px;
+    bottom:20px;
+    color:#ddd;
+    font-size:14px;
+    line-height:1.5;
+    z-index:2;
+    margin:0;
+    opacity:0;
+    transform:translateY(20px);
+    transition:.4s;
+}
+
+
+/* Hover */
+
+.restaurant-card:hover img{
+    transform:scale(1.1);
+}
+
+.restaurant-card:hover::after{
+    background:linear-gradient(to top,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.35));
+}
+
+.restaurant-card:hover h3{
+    bottom:110px;
+    color:#D4AF37;
+}
+
+.restaurant-card:hover p{
+    opacity:1;
+    bottom:40px;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.single-layout{
+    grid-template-columns:1fr;
+}
+
+.restaurant-text{
+    padding:20px;
+}
+
+.restaurant-image{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:600px){
+
+.restaurant-image{
+    grid-template-columns:1fr;
+}
+
+.restaurant-card{
+    height:240px;
+}
+
+.restaurant-text h2{
+    font-size:36px;
+}
+
+.restaurant-text{
+    padding:15px;
+}
+
+}
+
+
+
+.menu-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu-modal-content{
+    width:90%;
+    max-width:900px;
+    position:relative;
+}
+
+.menu-close{
+    position:absolute;
+    top:-45px;
+    right:0;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+    z-index:100;
+}
+
+.menu-close:hover{
+    color:#EFBF04;
+    transform:rotate(90deg);
+}
+
+
+.menuSwiper{
+    width:100%;
+    height:85vh;
+}
+
+.swiper-slide{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.swiper-slide img{
+    width:100%;
+    max-height:85vh;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+/* Swiper Navigation Buttons - Gold */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #D4AF37 !important; /* Gold */
+    transition: 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #EFBF04 !important; /* Brighter gold hover */
+}
+
+/* Swiper Pagination - Gold */
+.swiper-pagination-bullet {
+    background: #D4AF37 !important;
+    opacity: 0.6;
+    transition: 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #EFBF04 !important;
+    opacity: 1;
+}
+
+/* Optional: make arrows slightly bigger */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 35px;
+    font-weight: bold;
+}
 
 
 
@@ -1498,6 +1505,7 @@ html {
     border-radius: 5px;
 }
 
+
 /*************************************************************** WHY CHOOSE US *****************/
 .choose_section {
     text-align: center;
@@ -1553,7 +1561,36 @@ html {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+/* ==========================
+   Mobile Responsive
+========================== */
+@media (max-width: 768px) {
 
+    .choose_items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .choose_item {
+        padding: 15px;
+    }
+
+    .choose_item img {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .choose_item h3 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .choose_item p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+}
 
 
 
@@ -2135,3 +2172,74 @@ section.menu h2{
         width: 90%;
     }
 }
+
+/* ==========================
+   MOBILE RESPONSIVE NAVBAR
+========================== */
+@media (max-width: 768px) {
+
+    .nav_items {
+        width: 100%;
+    }
+
+    .nav_items .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav_items .item li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .nav_items .item li a {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    /* Dropdown */
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 12px 40px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .dropdown-menu li a:hover {
+        background: rgba(255,255,255,.08);
+        color: #D4AF37;
+    }
+}
+
+
